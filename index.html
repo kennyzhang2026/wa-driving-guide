@@ -700,6 +700,63 @@ a { color: var(--blue); }
 
   <!-- Expandable sections -->
   <button class="expand-btn" onclick="toggleExpand(this)">
+    🚦 交通灯规则（红灯/黄灯/绿灯）<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px">
+        <div style="flex:1;min-width:200px;background:#ffebee;padding:16px;border-radius:10px;text-align:center">
+          <div style="width:50px;height:50px;background:#D32F2F;border-radius:50%;margin:0 auto 8px;box-shadow:0 0 15px rgba(211,47,47,.4)"></div>
+          <strong>红灯 = 必须停车</strong><br>
+          <small>完全停住，等待绿灯。永远不能左转（除非有绿色箭头）</small>
+        </div>
+        <div style="flex:1;min-width:200px;background:#fffde7;padding:16px;border-radius:10px;text-align:center">
+          <div style="width:50px;height:50px;background:#FBC02D;border-radius:50%;margin:0 auto 8px;box-shadow:0 0 15px rgba(251,192,45,.4)"></div>
+          <strong>黄灯 = 必须停车</strong><br>
+          <small>除非你已经太近刹不住。详见下方</small>
+        </div>
+        <div style="flex:1;min-width:200px;background:#e8f5e9;padding:16px;border-radius:10px;text-align:center">
+          <div style="width:50px;height:50px;background:#388E3C;border-radius:50%;margin:0 auto 8px;box-shadow:0 0 15px rgba(56,142,60,.4)"></div>
+          <strong>绿灯 = 可以通行</strong><br>
+          <small>但仍需让行已在校内的车辆和行人</small>
+        </div>
+      </div>
+
+      <h4 style="color:var(--yellow)">黄灯详解（最容易犯错！）</h4>
+      <div class="alert alert-yellow" style="margin-top:8px">
+        <strong>常亮黄灯 = 能停就停，停不住才走</strong>
+        <ul style="margin-top:8px">
+          <li>黄灯亮起时，如果你<strong>离停止线还有足够距离安全刹车</strong> → <strong>必须停车</strong></li>
+          <li>黄灯亮起时，如果你<strong>已经非常接近停止线</strong>、急刹可能导致追尾 → 可以继续通过</li>
+          <li>判断标准是"能否安全停车"，不是"能不能冲过去"</li>
+          <li><strong>闯黄灯罚款 $200 + 扣 2 分</strong>：摄像头拍到你有足够距离刹车却选择冲过去</li>
+        </ul>
+      </div>
+
+      <div class="alert alert-blue" style="margin-top:12px">
+        <strong>闪烁黄灯 = 信号灯故障，谨慎通行</strong>
+        <ul style="margin-top:8px">
+          <li>跟常亮黄灯<strong>完全不同</strong>！不是"快点过"的意思</li>
+          <li>表示信号灯关闭/故障，相当于<strong>没有红绿灯的路口</strong></li>
+          <li>可以通行，但必须按让行规则（让右方来车）小心通过</li>
+        </ul>
+      </div>
+
+      <div class="alert alert-red" style="margin-top:12px">
+        <strong>中国司机最常犯的错误：</strong>
+        国内习惯"黄灯加速冲过去"，这在澳洲会被罚款！看到黄灯的第一反应应该是<strong>刹车</strong>，不是加速。
+      </div>
+
+      <h4 style="margin-top:16px">箭头灯</h4>
+      <ul>
+        <li><strong>绿色箭头</strong>：可以按箭头方向行驶（此时主灯可能是红灯，但箭头方向可以走）</li>
+        <li><strong>黄色箭头</strong>：同常亮黄灯规则 — 能停就停</li>
+        <li><strong>红色箭头</strong>：箭头方向禁止通行（即使主灯是绿灯）</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleExpand(this)">
     🍺 酒驾规定（BAC 限制）<span class="arrow">▶</span>
   </button>
   <div class="expand-body">
