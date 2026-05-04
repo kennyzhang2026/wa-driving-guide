@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>澳洲西澳驾驶培训 — 中国游客完全指南</title>
+<style>
+:root {
+  --red: #D32F2F;
+  --yellow: #FBC02D;
+  --green: #388E3C;
+  --blue: #1976D2;
+  --orange: #F57C00;
+  --dark: #263238;
+  --light: #ECEFF1;
+  --card-bg: #fff;
+  --shadow: 0 2px 8px rgba(0,0,0,.12);
+  --radius: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+a { color: var(--blue); }
+
+/* ===== Hero ===== */
+.hero { background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 48px 24px; text-align: center; position: relative; overflow: hidden; }
+.hero h1 { font-size: 2.2em; margin-bottom: 8px; }
+.hero .subtitle { font-size: 1.15em; opacity: .85; }
+.hero::after { content: '🚗🦘🇦🇺'; position: absolute; bottom: -10px; right: 20px; font-size: 3em; opacity: .15; }
+
+/* ===== Progress Bar ===== */
+.progress-wrap { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.1); padding: 8px 0; }
+.progress-bar { height: 4px; background: #e0e0e0; max-width: 900px; margin: 0 auto; border-radius: 2px; }
+.progress-fill { height: 100%; background: var(--green); border-radius: 2px; width: 0%; transition: width .5s ease; }
+.progress-text { text-align: center; font-size: .85em; color: #666; margin-top: 4px; }
+
+/* ===== Container ===== */
+.container { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+
+/* ===== TOC ===== */
+.toc { background: var(--card-bg); border-radius: var(--radius); padding: 24px; margin-bottom: 32px; box-shadow: var(--shadow); }
+.toc h2 { margin-bottom: 16px; font-size: 1.3em; }
+.toc ol { padding-left: 20px; }
+.toc li { margin-bottom: 8px; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+/* ===== Section ===== */
+.section { background: var(--card-bg); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; box-shadow: var(--shadow); }
+.section h2 { font-size: 1.5em; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 3px solid var(--blue); display: flex; align-items: center; gap: 8px; }
+.section h3 { font-size: 1.15em; margin: 20px 0 10px; color: var(--dark); }
+.section p, .section li { margin-bottom: 8px; }
+.section ul, .section ol { padding-left: 20px; }
+
+/* ===== Alert Box ===== */
+.alert { padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid; }
+.alert-red { background: #ffebee; border-color: var(--red); }
+.alert-yellow { background: #fffde7; border-color: var(--yellow); }
+.alert-green { background: #e8f5e9; border-color: var(--green); }
+.alert-blue { background: #e3f2fd; border-color: var(--blue); }
+.alert strong { display: block; margin-bottom: 4px; }
+
+/* ===== Tabs ===== */
+.tabs { display: flex; gap: 4px; margin-bottom: 0; }
+.tab-btn { padding: 10px 20px; border: none; background: #e0e0e0; cursor: pointer; border-radius: 8px 8px 0 0; font-size: .95em; transition: background .2s; }
+.tab-btn.active { background: var(--card-bg); box-shadow: var(--shadow); font-weight: 600; }
+.tab-content { display: none; padding: 20px; background: var(--card-bg); border: 1px solid #e0e0e0; border-top: none; border-radius: 0 0 8px 8px; }
+.tab-content.active { display: block; }
+
+/* ===== Comparison Table ===== */
+.compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .92em; }
+.compare-table th, .compare-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+.compare-table th { background: #f5f5f5; font-weight: 600; }
+.compare-table .cn { background: #fff3e0; }
+.compare-table .au { background: #e3f2fd; }
+
+/* ===== Road Sign Cards ===== */
+.signs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin: 16px 0; }
+.sign-card { background: #fafafa; border-radius: 10px; padding: 16px; text-align: center; border: 2px solid #e0e0e0; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.sign-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.sign-card .sign-icon { width: 80px; height: 80px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; }
+
+/* ===== Road Signs (CSS drawn) ===== */
+.sign-stop { width: 72px; height: 72px; background: var(--red); transform: rotate(0deg); clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 14px; }
+.sign-giveway { width: 72px; height: 72px; background: #fff; border: 3px solid var(--red); transform: rotate(180deg); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; align-items: center; justify-content: center; }
+.sign-giveway span { transform: rotate(180deg); font-size: 10px; font-weight: 700; color: var(--red); text-align: center; }
+.sign-speed { width: 72px; height: 72px; border-radius: 50%; border: 4px solid var(--red); background: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 22px; color: #000; }
+.sign-noentry { width: 72px; height: 72px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; }
+.sign-noentry::after { content: ''; width: 60%; height: 4px; background: #fff; }
+.sign-nouturn { width: 72px; height: 72px; border-radius: 50%; border: 4px solid var(--red); background: #fff; display: flex; align-items: center; justify-content: center; position: relative; }
+.sign-nouturn::before { content: '↩'; font-size: 30px; color: #000; }
+.sign-nouturn::after { content: ''; position: absolute; width: 80%; height: 3px; background: var(--red); transform: rotate(-45deg); }
+.sign-warning { width: 72px; height: 72px; background: var(--yellow); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; align-items: center; justify-content: center; }
+.sign-warning span { font-size: 28px; margin-top: 10px; }
+.sign-noleft { width: 72px; height: 72px; border-radius: 50%; border: 4px solid var(--red); background: #fff; display: flex; align-items: center; justify-content: center; position: relative; }
+.sign-noleft::before { content: '↰'; font-size: 28px; color: #000; }
+.sign-noleft::after { content: ''; position: absolute; width: 80%; height: 3px; background: var(--red); transform: rotate(-45deg); }
+.sign-nostopping { width: 72px; height: 72px; border-radius: 50%; border: 4px solid var(--red); background: #fff; display: flex; align-items: center; justify-content: center; position: relative; font-size: 24px; color: #000; }
+.sign-nostopping::after { content: ''; position: absolute; width: 80%; height: 3px; background: var(--red); transform: rotate(-45deg); }
+.sign-mandatory { width: 72px; height: 72px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 28px; }
+.sign-roadwork { width: 72px; height: 72px; background: var(--orange); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; align-items: center; justify-content: center; }
+.sign-roadwork span { font-size: 24px; margin-top: 8px; }
+
+/* ===== Driving Direction Visual ===== */
+.direction-demo { display: flex; gap: 24px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
+.direction-box { width: 280px; border-radius: 10px; padding: 20px; text-align: center; }
+.direction-cn { background: linear-gradient(135deg, #ffebee, #fff3e0); border: 2px solid #ef9a9a; }
+.direction-au { background: linear-gradient(135deg, #e3f2fd, #e8f5e9); border: 2px solid #90caf9; }
+.direction-box h4 { margin-bottom: 12px; font-size: 1.1em; }
+.road-lane { width: 100%; height: 60px; background: #555; border-radius: 6px; position: relative; margin: 8px 0; display: flex; align-items: center; }
+.road-lane::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: repeating-linear-gradient(to bottom, #fff 0, #fff 10px, transparent 10px, transparent 20px); }
+.car { font-size: 28px; position: absolute; transition: transform .3s; }
+.car-cn { left: calc(75% - 14px); }
+.car-au { left: calc(25% - 14px); transform: scaleX(-1); }
+
+/* ===== Roundabout Animation ===== */
+.roundabout-svg { width: 260px; height: 260px; margin: 16px auto; display: block; }
+
+/* ===== Fine Table ===== */
+.fine-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .9em; }
+.fine-table th { background: var(--dark); color: #fff; padding: 10px; text-align: left; }
+.fine-table td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+.fine-table tr:nth-child(even) { background: #f5f5f5; }
+.fine-table .fine-amount { color: var(--red); font-weight: 700; }
+
+/* ===== Quiz ===== */
+.quiz-wrap { background: #f5f5f5; border-radius: 10px; padding: 20px; margin: 16px 0; }
+.quiz-q { font-weight: 600; margin-bottom: 12px; font-size: 1.05em; }
+.quiz-q .q-num { color: var(--blue); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt { padding: 12px 16px; background: #fff; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all .2s; text-align: left; width: 100%; font-size: 1em; }
+.quiz-opt:hover { border-color: var(--blue); background: #e3f2fd; }
+.quiz-opt.correct { border-color: var(--green); background: #e8f5e9; }
+.quiz-opt.wrong { border-color: var(--red); background: #ffebee; }
+.quiz-opt:disabled { cursor: default; }
+.quiz-explain { margin-top: 12px; padding: 12px; border-radius: 8px; display: none; font-size: .95em; }
+.quiz-explain.show { display: block; }
+.quiz-score { text-align: center; font-size: 1.2em; padding: 20px; background: linear-gradient(135deg, #e3f2fd, #e8f5e9); border-radius: 10px; margin-top: 16px; }
+.quiz-score .score-num { font-size: 2.5em; font-weight: 900; color: var(--green); }
+
+/* ===== Interactive Card ===== */
+.flip-card { perspective: 1000px; height: 220px; cursor: pointer; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform .6s; transform-style: preserve-3d; }
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; }
+.flip-card-front { background: #fafafa; border: 2px solid #e0e0e0; }
+.flip-card-back { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); border: 2px solid var(--green); transform: rotateY(180deg); text-align: center; font-size: .9em; }
+
+/* ===== Checklist ===== */
+.checklist { list-style: none; padding: 0; }
+.checklist li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px; }
+.checklist input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--green); }
+.checklist label { cursor: pointer; flex: 1; }
+
+/* ===== Expandable ===== */
+.expand-btn { width: 100%; padding: 14px 18px; background: #f5f5f5; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; text-align: left; font-size: 1em; font-weight: 600; display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; transition: background .2s; }
+.expand-btn:hover { background: #e0e0e0; }
+.expand-btn .arrow { transition: transform .3s; font-size: .8em; }
+.expand-btn.open .arrow { transform: rotate(90deg); }
+.expand-body { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.expand-body.open { max-height: 2000px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.5em; }
+  .section { padding: 18px; }
+  .direction-demo { flex-direction: column; align-items: center; }
+  .signs-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+  .compare-table { font-size: .82em; }
+  .tabs { flex-wrap: wrap; }
+}
+
+/* ===== Print ===== */
+@media print {
+  .progress-wrap, .quiz-wrap { display: none; }
+  .section { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.section { animation: fadeInUp .5s ease; }
+
+/* ===== Badge ===== */
+.badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: .8em; font-weight: 600; }
+.badge-red { background: #ffebee; color: var(--red); }
+.badge-green { background: #e8f5e9; color: var(--green); }
+.badge-blue { background: #e3f2fd; color: var(--blue); }
+.badge-orange { background: #fff3e0; color: var(--orange); }
+
+/* ===== Scenario Cards ===== */
+.scenario-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin: 16px 0; }
+.scenario-card { background: #fafafa; border-radius: 10px; padding: 16px; border-left: 4px solid var(--blue); }
+.scenario-card h4 { margin-bottom: 8px; color: var(--dark); }
+.scenario-card p { font-size: .9em; color: #555; }
+
+/* ===== Keyboard Hint ===== */
+.key-hint { display: inline-flex; align-items: center; gap: 4px; }
+.key-hint kbd { padding: 2px 8px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: .85em; }
+</style>
+</head>
+<body>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <h1>澳洲西澳驾驶培训</h1>
+  <p class="subtitle">中国游客完全指南 — 从零开始，安全上路</p>
+  <p style="margin-top:12px;font-size:.9em;opacity:.7">最后更新：2026年5月 | 来源：WA 交通部、道路安全委员会</p>
+</div>
+
+<!-- ===== Progress Bar ===== -->
+<div class="progress-wrap">
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-text" id="progressText">学习进度：0%</div>
+</div>
+
+<!-- ===== Main Content ===== -->
+<div class="container">
+
+<!-- ===== TOC ===== -->
+<div class="toc">
+  <h2>目录（点击跳转）</h2>
+  <ol>
+    <li><a href="#sec-license">驾照要求 — 中国驾照能在澳洲用吗？</a></li>
+    <li><a href="#sec-direction">靠左行驶 — 最重要的一课</a></li>
+    <li><a href="#sec-speed">限速规则 — 严格的澳洲执法</a></li>
+    <li><a href="#sec-signs">道路标识 — 图文全解</a></li>
+    <li><a href="#sec-roundabout">环岛规则 — 顺时针通行</a></li>
+    <li><a href="#sec-rules">核心交规速查</a></li>
+    <li><a href="#sec-fines">罚款与扣分 — 不要试法</a></li>
+    <li><a href="#sec-wildlife">野生动物 — 独特的澳洲挑战</a></li>
+    <li><a href="#sec-parking">停车规则</a></li>
+    <li><a href="#sec-emergency">紧急联系与应急</a></li>
+    <li><a href="#sec-checklist">出发前自检清单</a></li>
+    <li><a href="#sec-quiz">互动测验 — 考考你学到了多少</a></li>
+  </ol>
+</div>
+
+<!-- ========== 1. LICENSE ========== -->
+<div class="section" id="sec-license">
+  <h2><span style="font-size:1.2em">📋</span> 1. 驾照要求</h2>
+
+  <div class="alert alert-green">
+    <strong>好消息：可以！</strong>
+    中国驾照持有者可以在西澳合法驾驶，但必须满足以下条件。
+  </div>
+
+  <h3>必须携带的证件</h3>
+  <div class="scenario-grid">
+    <div class="scenario-card" style="border-color:var(--green)">
+      <h4>✅ 中国驾照原件</h4>
+      <p>必须随身携带原件，电子照片/复印件不被接受</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--blue)">
+      <h4>✅ 英文翻译件 / IDP</h4>
+      <p>支付宝申请的国际驾照翻译认证件（小本本）<strong>可以使用</strong>，或者公证处出具的英文翻译件</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--orange)">
+      <h4>✅ 护照</h4>
+      <p>建议同时携带护照，以备身份核验</p>
+    </div>
+  </div>
+
+  <div class="alert alert-yellow">
+    <strong>⚠️ 关于你的支付宝"国际驾照"小本本</strong>
+    中国大陆没有加入《日内瓦道路交通公约》，所以严格来说你拿到的不是"国际驾照（IDP）"，而是"驾照翻译认证件"。<br><br>
+    <strong>在 WA 实际使用中：</strong>这个翻译件小本本 + 中国驾照原件 = 可以合法驾驶。<br>
+    <strong>必须两本一起带！</strong>单独带小本本不行，必须同时出示原件。
+  </div>
+
+  <h3>关键规则</h3>
+  <ul>
+    <li><strong>驾照必须在有效期内</strong> — 过期的不行</li>
+    <li><strong>只能驾驶你中国驾照上允许的车型</strong> — C牌开小汽车没问题</li>
+    <li><strong>游客身份没有时间限制</strong> — 整个访问期间都可以用</li>
+    <li><strong>永久居民需 3 个月内换领 WA 驾照</strong> — 短期签证不受影响</li>
+    <li><strong>必须遵守所有 WA 交规</strong> — 外国驾照没有豁免</li>
+  </ul>
+
+  <h3>中国驾照 vs 澳洲要求对比</h3>
+  <table class="compare-table">
+    <tr><th>项目</th><th class="cn">中国</th><th class="au">澳洲 WA</th></tr>
+    <tr><td>驾照语言</td><td class="cn">中文</td><td class="au">需要英文翻译件</td></tr>
+    <tr><td>必须随身携带</td><td class="cn">是</td><td class="au">是（原件+翻译件）</td></tr>
+    <tr><td>电子驾照</td><td class="cn">部分城市支持</td><td class="au">不接受，必须纸质原件</td></tr>
+    <tr><td>游客使用时限</td><td class="cn">—</td><td class="au">整个访问期间</td></tr>
+    <tr><td>租车要求</td><td class="cn">—</td><td class="au">驾照 + 翻译件 + 信用卡</td></tr>
+  </table>
+</div>
+
+<!-- ========== 2. DIRECTION ========== -->
+<div class="section" id="sec-direction">
+  <h2><span style="font-size:1.2em">🚗</span> 2. 靠左行驶 — 最重要的一课</h2>
+
+  <div class="alert alert-red">
+    <strong>这是最大的不同！记住：KEEP LEFT！</strong>
+    澳洲是左侧通行，与中国完全相反。每次上车前，先提醒自己"靠左"。
+  </div>
+
+  <h3>直观对比</h3>
+  <div class="direction-demo">
+    <div class="direction-box direction-cn">
+      <h4>🇨🇳 中国 — 靠右行驶</h4>
+      <div class="road-lane">
+        <div class="car car-cn">🚗</div>
+      </div>
+      <p style="font-size:.85em;margin-top:8px">司机坐左边 → 方向盘在左边 → 车靠右走</p>
+    </div>
+    <div class="direction-box direction-au">
+      <h4>🇦🇺 澳洲 — 靠左行驶</h4>
+      <div class="road-lane">
+        <div class="car car-au">🚗</div>
+      </div>
+      <p style="font-size:.85em;margin-top:8px">司机坐右边 → 方向盘在右边 → 车靠左走</p>
+    </div>
+  </div>
+
+  <h3>关键差异一览表</h3>
+  <table class="compare-table">
+    <tr><th>项目</th><th class="cn">中国 🇨🇳</th><th class="au">澳洲 WA 🇦🇺</th></tr>
+    <tr><td>行驶方向</td><td class="cn">靠右</td><td class="au"><strong>靠左</strong></td></tr>
+    <tr><td>司机位置</td><td class="cn">左侧</td><td class="au"><strong>右侧</strong></td></tr>
+    <tr><td>超车方向</td><td class="cn">从左侧超</td><td class="au"><strong>从右侧超</strong></td></tr>
+    <tr><td>快速车道</td><td class="cn">最左侧</td><td class="au"><strong>最右侧</strong></td></tr>
+    <tr><td>环岛方向</td><td class="cn">逆时针</td><td class="au"><strong>顺时针</strong></td></tr>
+    <tr><td>让行方向</td><td class="cn">让左方来车</td><td class="au"><strong>让右方来车</strong></td></tr>
+    <tr><td>红灯左转</td><td class="cn">有时可右转</td><td class="au"><strong>永远不可左转</strong></td></tr>
+    <tr><td>行人过街先看</td><td class="cn">先看左</td><td class="au"><strong>先看右！</strong></td></tr>
+  </table>
+
+  <h3>实用适应技巧</h3>
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <h4>📌 仪表盘贴纸</h4>
+      <p>在仪表盘贴一张"KEEP LEFT"提醒贴纸。很多租车公司会提供</p>
+    </div>
+    <div class="scenario-card">
+      <h4>📌 跟着前车</h4>
+      <p>有车时跟着前车走，最不容易走错。没车时最容易出错</p>
+    </div>
+    <div class="scenario-card">
+      <h4>📌 转弯时最危险</h4>
+      <p>左转是小弯（容易），右转是大弯（要跨对向车道），最容易走错方向</p>
+    </div>
+    <div class="scenario-card">
+      <h4>📌 雨刮/转向灯拨杆</h4>
+      <p>澳洲车的转向灯和雨刮拨杆位置可能和中国相反，新手容易搞混</p>
+    </div>
+  </div>
+
+  <div class="alert alert-red">
+    <strong>特别注意：红灯不能左转！</strong>
+    在中国有些路口红灯可以右转，但在澳洲，<strong>红灯永远不能左转</strong>（除非有专门的绿色箭头灯指示可以左转）。这是很多中国司机被罚款的原因！
+  </div>
+</div>
+
+<!-- ========== 3. SPEED ========== -->
+<div class="section" id="sec-speed">
+  <h2><span style="font-size:1.2em">🚦</span> 3. 限速规则</h2>
+
+  <div class="alert alert-red">
+    <strong>澳洲测速极其严格，容忍度仅约 1 km/h！</strong>
+    不像国内可能有 10% 的缓冲，在 WA，标志上的数字就是绝对上限。
+  </div>
+
+  <h3>各场景限速</h3>
+  <table class="fine-table">
+    <tr><th>场景</th><th>限速</th><th>说明</th></tr>
+    <tr><td>市区（无标志）</td><td class="fine-amount">50 km/h</td><td>没看到限速牌就按这个</td></tr>
+    <tr><td>学校区域</td><td class="fine-amount">40 km/h</td><td>上学日 7:30-9:00, 14:30-16:00</td></tr>
+    <tr><td>施工路段</td><td class="fine-amount">40-60 km/h</td><td>临时限速同样具有法律效力</td></tr>
+    <tr><td>高速公路（无标志）</td><td class="fine-amount">100 km/h</td><td>默认高速限速</td></tr>
+    <tr><td>乡村公路（无标志）</td><td class="fine-amount">110 km/h</td><td>开阔路段默认</td></tr>
+    <tr><td>拖车/挂车</td><td class="fine-amount">最高 100 km/h</td><td>即使限速 110 也不能超 100</td></tr>
+    <tr><td>紧急车辆现场</td><td class="fine-amount">40 km/h</td><td>看到闪灯必须减速</td></tr>
+  </table>
+
+  <h3>学校区域 <span class="badge badge-orange">重要</span></h3>
+  <div class="scenario-grid">
+    <div class="scenario-card" style="border-color:var(--orange)">
+      <h4>⏰ 时间段</h4>
+      <p>上学日 <strong>7:30-9:00</strong> 和 <strong>14:30-16:00</strong>（部分学校全天 40km/h）</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--orange)">
+      <h4>🚸 标志特征</h4>
+      <p>路边有 <strong>40</strong> 限速牌，通常配闪灯提示</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--red)">
+      <h4>📸 执法严格</h4>
+      <p>学校区域有专门的测速摄像头，学校区域手机罚款翻倍</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 4. SIGNS ========== -->
+<div class="section" id="sec-signs">
+  <h2><span style="font-size:1.2em">🪧</span> 4. 道路标识 — 图文全解</h2>
+
+  <p>澳洲道路标识按颜色和形状分类。记住颜色含义是理解所有标识的关键：</p>
+
+  <div class="scenario-grid" style="margin-bottom:20px">
+    <div style="text-align:center;padding:12px;background:#ffebee;border-radius:8px">
+      <div style="width:40px;height:40px;background:var(--red);border-radius:50%;margin:0 auto 8px"></div>
+      <strong>红色</strong><br><small>禁止 / 停止 / 最高限速</small>
+    </div>
+    <div style="text-align:center;padding:12px;background:#fffde7;border-radius:8px">
+      <div style="width:40px;height:40px;background:var(--yellow);clip-path:polygon(50% 0%,100% 100%,0% 100%);margin:0 auto 8px"></div>
+      <strong>黄色菱形</strong><br><small>前方警告</small>
+    </div>
+    <div style="text-align:center;padding:12px;background:#e8f5e9;border-radius:8px">
+      <div style="width:40px;height:40px;background:var(--green);border-radius:4px;margin:0 auto 8px"></div>
+      <strong>绿色</strong><br><small>方向指引 / 允许通行</small>
+    </div>
+    <div style="text-align:center;padding:12px;background:#e3f2fd;border-radius:8px">
+      <div style="width:40px;height:40px;background:var(--blue);border-radius:50%;margin:0 auto 8px"></div>
+      <strong>蓝色</strong><br><small>强制指令 / 服务信息</small>
+    </div>
+    <div style="text-align:center;padding:12px;background:#fff3e0;border-radius:8px">
+      <div style="width:40px;height:40px;background:var(--orange);clip-path:polygon(50% 0%,100% 100%,0% 100%);margin:0 auto 8px"></div>
+      <strong>橙色</strong><br><small>临时施工（同样有法律效力）</small>
+    </div>
+  </div>
+
+  <!-- Tabs for sign categories -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('signs', 0)">管制标志</button>
+    <button class="tab-btn" onclick="switchTab('signs', 1)">警告标志</button>
+    <button class="tab-btn" onclick="switchTab('signs', 2)">指示标志</button>
+    <button class="tab-btn" onclick="switchTab('signs', 3)">施工标志</button>
+  </div>
+
+  <div class="tab-content active" id="signs-tab-0">
+    <h3 style="margin-top:0">管制标志（必须遵守，违规罚款）</h3>
+    <p><span class="badge badge-red">特征：红色边框/背景 + 白底黑字</span></p>
+    <div class="signs-grid">
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-stop">STOP</div></div>
+        <strong>停车</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">必须完全停住车，让行所有车辆</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-giveway"><span>GIVE<br>WAY</span></div></div>
+        <strong>让行</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">减速，让主路车辆先行</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-speed">60</div></div>
+        <strong>限速 60</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">最高时速 60km/h，不可超过</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-noentry"></div></div>
+        <strong>禁止进入</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">此方向禁止驶入（单行道逆行等）</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-nouturn"></div></div>
+        <strong>禁止掉头</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">此处不允许 U 型掉头</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-noleft"></div></div>
+        <strong>禁止左转</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">此处不允许左转</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-nostopping">S</div></div>
+        <strong>禁止停车</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">任何时候都不允许停车</p>
+      </div>
+      <div class="sign-card" onclick="flipSign(this)">
+        <div class="sign-icon"><div class="sign-mandatory">↰</div></div>
+        <strong>必须左转</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">蓝色圆形 = 强制指令</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="signs-tab-1">
+    <h3 style="margin-top:0">警告标志（注意前方危险）</h3>
+    <p><span class="badge badge-orange">特征：黄色菱形 + 黑色图案</span></p>
+    <div class="signs-grid">
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>🦘</span></div></div>
+        <strong>袋鼠出没</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">前方有野生动物，减速注意</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>🔄</span></div></div>
+        <strong>环岛前方</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">前方有环岛，准备让行</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>📐</span></div></div>
+        <strong>弯道</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">前方有弯道，减速</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>🚶</span></div></div>
+        <strong>行人区域</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">前方有人行横道/学校</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>🚂</span></div></div>
+        <strong>铁路道口</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">前方有铁路，注意观察</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>📉</span></div></div>
+        <strong>下坡</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">陡坡下坡，用低档制动</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>🚛</span></div></div>
+        <strong>公路列车</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">超长卡车，注意超车安全</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-warning"><span>🪨</span></div></div>
+        <strong>碎石路</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">非铺装路面，轮胎抓地力差</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="signs-tab-2">
+    <h3 style="margin-top:0">指示标志（方向和服务信息）</h3>
+    <p><span class="badge badge-green">绿色 = 方向 | 蓝色 = 服务</span></p>
+    <div class="signs-grid">
+      <div class="sign-card" style="background:#e8f5e9">
+        <div class="sign-icon"><div style="background:var(--green);color:#fff;padding:6px 14px;border-radius:4px;font-size:.85em;font-weight:700">Perth 15km →</div></div>
+        <strong>方向指示</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">绿底白字 = 目的地和距离</p>
+      </div>
+      <div class="sign-card" style="background:#e3f2fd">
+        <div class="sign-icon"><div style="background:var(--blue);color:#fff;padding:6px 14px;border-radius:4px;font-size:.85em;font-weight:700">⛽ P 🍔 🏥</div></div>
+        <strong>服务信息</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">蓝底白字 = 加油/停车/餐饮/医院</p>
+      </div>
+      <div class="sign-card" style="background:#e8f5e9">
+        <div class="sign-icon"><div style="background:var(--green);color:#fff;padding:6px 14px;border-radius:4px;font-size:.85em;font-weight:700">EXIT 42 →</div></div>
+        <strong>高速出口</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">绿色出口编号 + 目的地</p>
+      </div>
+      <div class="sign-card" style="background:#fff3e0">
+        <div class="sign-icon"><div style="background:#795548;color:#fff;padding:6px 14px;border-radius:4px;font-size:.85em;font-weight:700">🏛 Tourist →</div></div>
+        <strong>旅游景点</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">棕色底 = 旅游景点方向</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="signs-tab-3">
+    <h3 style="margin-top:0">施工标志（临时但具有法律效力！）</h3>
+    <p><span class="badge badge-orange">特征：橙色菱形，临时放置</span></p>
+    <div class="alert alert-yellow">
+      <strong>重要：</strong> 施工区域的临时限速标志和普通限速标志具有同等法律效力！施工 40km/h 的限速牌和普通 40km/h 限速牌罚款一样重。
+    </div>
+    <div class="signs-grid">
+      <div class="sign-card">
+        <div class="sign-icon"><div class="sign-roadwork"><span>⚠️</span></div></div>
+        <strong>前方施工</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">减速，注意施工人员</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div style="border:4px solid var(--orange);width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:var(--orange)">40</div></div>
+        <strong>施工限速</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">临时限速，违规同样罚款</p>
+      </div>
+      <div class="sign-card">
+        <div class="sign-icon"><div style="font-size:48px">🛑</div></div>
+        <strong>交通指挥</strong>
+        <p style="font-size:.8em;color:#666;margin-top:4px">必须遵守指挥人员的 STOP/SLOW 指示</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Quiz (flip cards) -->
+  <h3 style="margin-top:24px">翻转卡片 — 测测你认不认识这些标识</h3>
+  <p style="color:#666;font-size:.9em">点击卡片翻转查看答案</p>
+  <div class="signs-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="sign-stop" style="margin-bottom:8px">STOP</div>
+          <p style="font-size:.9em;color:#888">这是什么？</p>
+        </div>
+        <div class="flip-card-back">
+          <strong>停车标志</strong><br>
+          必须完全停住车辆（不是减速），观察后再通行。通常出现在小路汇入主路的路口。
+        </div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="sign-giveway" style="margin-bottom:8px"><span>GIVE<br>WAY</span></div>
+          <p style="font-size:.9em;color:#888">这是什么？</p>
+        </div>
+        <div class="flip-card-back">
+          <strong>让行标志</strong><br>
+          减速并让主路上的车辆先行。不需要完全停住，但必须确保安全。
+        </div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="sign-speed" style="margin-bottom:8px">50</div>
+          <p style="font-size:.9em;color:#888">这是什么？</p>
+        </div>
+        <div class="flip-card-back">
+          <strong>限速 50km/h</strong><br>
+          最高时速 50 公里。白底红圈 + 数字 = 最高限速，不能超过。
+        </div>
+      </div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="sign-warning" style="margin-bottom:8px"><span>🦘</span></div>
+          <p style="font-size:.9em;color:#888">这是什么？</p>
+        </div>
+        <div class="flip-card-back">
+          <strong>袋鼠/野生动物警告</strong><br>
+          前方路段可能有袋鼠等野生动物横穿，尤其在黎明和黄昏时段要特别小心。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 5. ROUNDABOUT ========== -->
+<div class="section" id="sec-roundabout">
+  <h2><span style="font-size:1.2em">🔄</span> 5. 环岛规则</h2>
+
+  <div class="alert alert-blue">
+    <strong>核心规则：顺时针行驶，让右方来车！</strong>
+    澳洲环岛是顺时针方向（与中国相反），进入环岛前必须让行已经在环岛内的车辆（从你右边来的车）。
+  </div>
+
+  <!-- Roundabout SVG diagram -->
+  <svg class="roundabout-svg" viewBox="0 0 260 260">
+    <!-- Background -->
+    <rect x="0" y="0" width="260" height="260" fill="#f5f5f5" rx="10"/>
+    <!-- Road cross -->
+    <rect x="0" y="95" width="260" height="70" fill="#555"/>
+    <rect x="95" y="0" width="70" height="260" fill="#555"/>
+    <!-- Center island -->
+    <circle cx="130" cy="130" r="45" fill="#ccc" stroke="#999" stroke-width="2"/>
+    <circle cx="130" cy="130" r="35" fill="#e8e8e8"/>
+    <text x="130" y="128" text-anchor="middle" font-size="11" fill="#555" font-weight="700">让右方</text>
+    <text x="130" y="142" text-anchor="middle" font-size="11" fill="#555" font-weight="700">来车</text>
+    <!-- Direction arrows (clockwise) -->
+    <!-- Top approach going right -->
+    <path d="M 130 85 Q 160 90 175 130" fill="none" stroke="#1976D2" stroke-width="3" marker-end="url(#arrow)"/>
+    <!-- Right approach going down -->
+    <path d="M 175 130 Q 170 160 130 175" fill="none" stroke="#1976D2" stroke-width="3" marker-end="url(#arrow)"/>
+    <!-- Bottom approach going left -->
+    <path d="M 130 175 Q 100 170 85 130" fill="none" stroke="#1976D2" stroke-width="3" marker-end="url(#arrow)"/>
+    <!-- Left approach going up -->
+    <path d="M 85 130 Q 90 100 130 85" fill="none" stroke="#1976D2" stroke-width="3" marker-end="url(#arrow)"/>
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#1976D2"/>
+      </marker>
+    </defs>
+    <!-- Labels -->
+    <text x="130" y="75" text-anchor="middle" font-size="12" fill="#D32F2F" font-weight="700">← 让右边来车</text>
+    <text x="130" y="195" text-anchor="middle" font-size="12" fill="#388E3C" font-weight="700">顺时针方向 ↻</text>
+  </svg>
+
+  <h3>三种通行方式</h3>
+  <div class="scenario-grid">
+    <div class="scenario-card" style="border-color:var(--green)">
+      <h4>⬅ 左转（第一个出口）</h4>
+      <p>打<strong>左转灯</strong>，走<strong>左车道</strong>，从左侧出口驶出</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--blue)">
+      <h4>⬆ 直行</h4>
+      <p>进入时<strong>不打灯</strong>，驶出前打<strong>左转灯</strong></p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--orange)">
+      <h4>➡ 右转 / 掉头</h4>
+      <p>打<strong>右转灯</strong>，走<strong>右车道</strong>，驶出前打<strong>左转灯</strong></p>
+    </div>
+  </div>
+
+  <div class="alert alert-yellow">
+    <strong>简单记忆法：</strong>
+    <ul style="margin-top:8px">
+      <li>进入环岛 → 看右，让右方来车</li>
+      <li>在环岛里 → 顺时针走</li>
+      <li>要出环岛 → 打左转灯</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 6. CORE RULES ========== -->
+<div class="section" id="sec-rules">
+  <h2><span style="font-size:1.2em">📖</span> 6. 核心交规速查</h2>
+
+  <!-- Expandable sections -->
+  <button class="expand-btn" onclick="toggleExpand(this)">
+    🍺 酒驾规定（BAC 限制）<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <table class="fine-table">
+        <tr><th>驾照类型</th><th>血液酒精限制</th></tr>
+        <tr><td>正式驾照（Full License）</td><td class="fine-amount">0.05%</td></tr>
+        <tr><td>学习驾照 / 临时驾照</td><td class="fine-amount">0.00%（完全禁酒）</td></tr>
+        <tr><td>重型车辆 / 公交 / 出租车司机</td><td class="fine-amount">0.00%</td></tr>
+      </table>
+      <div class="alert alert-yellow">
+        <strong>建议：开车就不喝酒！</strong>
+        0.05% 相当于体型小的人喝一杯标准酒精饮品。但每个人代谢不同，最安全的选择是开车日完全不饮酒。WA 警察会随机路检吹气，拒绝检测是违法的。
+      </div>
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleExpand(this)">
+    📱 手机使用规定<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <div class="alert alert-red">
+        <strong>WA 对手机管控极其严格！</strong>2025 年起部署 AI 摄像头自动检测手机使用和未系安全带。
+      </div>
+      <table class="fine-table">
+        <tr><th>行为</th><th>罚款</th><th>扣分</th></tr>
+        <tr><td>看短信/微信/社交媒体/视频</td><td class="fine-amount">$1,000</td><td>4 分</td></tr>
+        <tr><td>在学校区域使用手机</td><td class="fine-amount">$1,000</td><td>5 分</td></tr>
+        <tr><td>手持手机打电话</td><td class="fine-amount">$500</td><td>3 分</td></tr>
+      </table>
+      <p><strong>可以做的：</strong>手机放在车载支架上，用蓝牙/语音接听电话；用导航 APP（提前设好路线）</p>
+      <p><strong>不能做的：</strong>手持手机、发信息、看视频、刷朋友圈 — 即使等红灯也不行！</p>
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleExpand(this)">
+    💺 安全带规定<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <ul>
+        <li><strong>所有乘客必须系安全带</strong> — 包括后排乘客</li>
+        <li><strong>司机对所有人的安全带负责</strong> — 别人没系，司机被罚</li>
+        <li>未系安全带罚款 <strong>$550 + 4 分/人</strong></li>
+        <li>7 岁以下儿童必须使用儿童安全座椅</li>
+        <li>7 岁以下儿童不能坐前排（除非只有一排座椅）</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleExpand(this)">
+    🔀 变道与让行规则<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <ul>
+        <li><strong>无标志路口</strong>：让右方来车</li>
+        <li><strong>T 字路口</strong>：支路车辆让主路车辆</li>
+        <li><strong>转弯车辆让行人</strong>：无论何时</li>
+        <li><strong>两车道合并</strong>（无标线）：前方车辆优先</li>
+        <li><strong>车道线结束</strong>：让目标车道车辆</li>
+        <li><strong>掉头</strong>：红绿灯处禁止掉头（除非有允许标志），必须让所有车辆</li>
+      </ul>
+      <div class="alert alert-blue">
+        <strong>道路标线规则：</strong>
+        <ul style="margin-top:4px">
+          <li>单实线 → 不能跨越超车</li>
+          <li>双实线 → 绝对不能跨越</li>
+          <li>虚线 → 安全时可以跨越</li>
+          <li>实线+虚线 → 只有虚线在你这一侧时才能跨越</li>
+          <li>例外：为了超越自行车，可以跨越实线（保持最小距离）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleExpand(this)">
+    🚴 自行车超车距离<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <ul>
+        <li>限速 ≤60km/h 的道路：最少保持 <strong>1 米</strong>距离</li>
+        <li>限速 &gt;60km/h 的道路：最少保持 <strong>1.5 米</strong>距离</li>
+        <li>必要时可以跨越中心线超自行车（安全情况下）</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="expand-btn" onclick="toggleExpand(this)">
+    🚑 紧急车辆让行（SLOMO 法则）<span class="arrow">▶</span>
+  </button>
+  <div class="expand-body">
+    <div style="padding:16px">
+      <div class="alert alert-blue">
+        <strong>SLOMO = Slow Down, Move Over</strong>
+      </div>
+      <ul>
+        <li>看到<strong>停在路边的</strong>紧急车辆闪灯（警车/救护/消防）→ 减速到 <strong>40km/h</strong></li>
+        <li>听到/看到<strong>迎面而来的</strong>紧急车辆 → 靠<strong>左</strong>让行</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 7. FINES ========== -->
+<div class="section" id="sec-fines">
+  <h2><span style="font-size:1.2em">💰</span> 7. 罚款与扣分</h2>
+
+  <h3>超速罚款（2026年标准）</h3>
+  <table class="fine-table">
+    <tr><th>超速范围</th><th>罚款金额</th><th>扣分</th></tr>
+    <tr><td>超速 1-9 km/h</td><td class="fine-amount">$100</td><td>0</td></tr>
+    <tr><td>超速 10-19 km/h</td><td class="fine-amount">$200</td><td>2</td></tr>
+    <tr><td>超速 20-29 km/h</td><td class="fine-amount">$400</td><td>3</td></tr>
+    <tr><td>超速 30-40 km/h</td><td class="fine-amount">$800</td><td>6</td></tr>
+    <tr><td>超速 40 km/h 以上</td><td class="fine-amount">$1,200</td><td>7</td></tr>
+  </table>
+
+  <div class="alert alert-red">
+    <strong>超速 40km/h 以上 = 立即吊销驾照 28 天！</strong>
+    在学校区域超速 45km/h 以上 = 车辆直接被扣押 28 天。
+  </div>
+
+  <h3>其他常见罚款</h3>
+  <table class="fine-table">
+    <tr><th>违规行为</th><th>罚款</th><th>扣分</th></tr>
+    <tr><td>闯红灯</td><td class="fine-amount">$400</td><td>3</td></tr>
+    <tr><td>闯黄灯</td><td class="fine-amount">$200</td><td>2</td></tr>
+    <tr><td>未系安全带（司机）</td><td class="fine-amount">$550</td><td>4</td></tr>
+    <tr><td>未系安全带（每位乘客）</td><td class="fine-amount">+$550</td><td>+4</td></tr>
+    <tr><td>使用手机（发信息等）</td><td class="fine-amount">$1,000</td><td>4</td></tr>
+    <tr><td>学校区域使用手机</td><td class="fine-amount">$1,000</td><td>5</td></tr>
+    <tr><td>手持手机打电话</td><td class="fine-amount">$500</td><td>3</td></tr>
+  </table>
+
+  <h3>双倍扣分期（2026年）<span class="badge badge-red">重要</span></h3>
+  <div class="alert alert-yellow">
+    <strong>公共假期期间扣分翻倍！</strong>罚款金额不变，但扣分翻倍。
+  </div>
+  <table class="fine-table">
+    <tr><th>假期</th><th>日期</th></tr>
+    <tr><td>澳洲日长周末</td><td>1月24-26日</td></tr>
+    <tr><td>劳动节长周末</td><td>2月28日-3月2日</td></tr>
+    <tr><td>复活节长周末</td><td>4月3-6日</td></tr>
+    <tr><td>澳新军团日</td><td>4月25日（24小时）</td></tr>
+    <tr><td>西澳日长周末</td><td>5月30日-6月1日</td></tr>
+    <tr><td>圣诞 & 新年</td><td>12月24日-1月1日</td></tr>
+  </table>
+
+  <div class="alert alert-blue">
+    <strong>摄像头小知识：</strong>
+    <ul style="margin-top:4px">
+      <li>WA 有<strong>双功能摄像头</strong>：同时检测闯红灯和超速，一个违章可以收<strong>两张罚单</strong></li>
+      <li>有<strong>区间测速</strong>：计算你通过一段距离的平均速度（Forrest Highway）</li>
+      <li>2025 年起部署 <strong>AI 摄像头</strong>：自动检测手机使用和未系安全带</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 8. WILDLIFE ========== -->
+<div class="section" id="sec-wildlife">
+  <h2><span style="font-size:1.2em">🦘</span> 8. 野生动物 — 独特的澳洲挑战</h2>
+
+  <div class="alert alert-red">
+    <strong>每年超过 7000 起车辆撞袋鼠事故！</strong>
+    这是澳洲驾驶最独特的风险。如果自驾去郊区或西澳内陆，必须了解。
+  </div>
+
+  <h3>高风险时段和区域</h3>
+  <div class="scenario-grid">
+    <div class="scenario-card" style="border-color:var(--red)">
+      <h4>🌅 黎明和黄昏</h4>
+      <p>袋鼠最活跃的时段。日出前 1 小时到日出后 1 小时，日落前 1 小时到日落后 1 小时</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--orange)">
+      <h4>❄️ 冬季</h4>
+      <p>袋鼠在路边找食物，冬季活动更频繁</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--yellow)">
+      <h4>🌾 郊区和乡村公路</h4>
+      <p>城市里基本不会遇到，但开出珀斯 30 分钟后就有可能</p>
+    </div>
+    <div class="scenario-card" style="border-color:var(--dark)">
+      <h4>🛣 长直路段</h4>
+      <p>动物容易被车灯惊吓而跳向车辆，夜间行车尤其注意</p>
+    </div>
+  </div>
+
+  <h3>遇到动物怎么办？</h3>
+  <table class="compare-table">
+    <tr><th>做法</th><th style="color:var(--green)">✅ 正确</th><th style="color:var(--red)">❌ 错误</th></tr>
+    <tr><td>发现动物</td><td style="color:var(--green)">减速 + 鸣笛</td><td style="color:var(--red)">高速闪避/急打方向盘</td></tr>
+    <tr><td>无法避开</td><td style="color:var(--green)">刹车 + 正面撞（更安全）</td><td style="color:var(--red)">急转弯（可能翻车/撞树）</td></tr>
+    <tr><td>撞到之后</td><td style="color:var(--green)">靠边停车 + 打电话</td><td style="color:var(--red)">靠近受伤袋鼠</td></tr>
+  </table>
+
+  <div class="alert alert-yellow">
+    <strong>如果你撞到了野生动物：</strong>
+    <ol style="margin-top:4px">
+      <li>安全靠边停车</li>
+      <li>拨打 <strong>Wildcare 热线：9474 9055</strong></li>
+      <li><strong>不要靠近受伤的袋鼠</strong> — 后腿踢击力量极大，非常危险</li>
+      <li>如果有人员受伤，拨打 <strong>000</strong></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ========== 9. PARKING ========== -->
+<div class="section" id="sec-parking">
+  <h2><span style="font-size:1.2em">🅿️</span> 9. 停车规则</h2>
+
+  <table class="fine-table">
+    <tr><th>标志</th><th>含义</th><th>违规后果</th></tr>
+    <tr>
+      <td><strong>No Stopping</strong><br><small>（或路边实线黄线）</small></td>
+      <td>绝对不能停车，上下客也不行</td>
+      <td class="fine-amount">罚款</td>
+    </tr>
+    <tr>
+      <td><strong>No Parking</strong></td>
+      <td>可临时停车 2 分钟上下客，司机不能离开车 3 米以外</td>
+      <td class="fine-amount">罚款</td>
+    </tr>
+    <tr>
+      <td><strong>1P / 2P / 4P</strong></td>
+      <td>最多停 1/2/4 小时。数字前面有"$"表示需要买票</td>
+      <td class="fine-amount">超时罚款</td>
+    </tr>
+    <tr>
+      <td><strong>Clearway</strong></td>
+      <td>高峰时段禁止停车（通常 7-9am, 4-6pm）</td>
+      <td class="fine-amount">拖车 + 罚款</td>
+    </tr>
+    <tr>
+      <td><strong>路边黄实线</strong></td>
+      <td>等同 No Stopping</td>
+      <td class="fine-amount">罚款</td>
+    </tr>
+    <tr>
+      <td><strong>路边黄虚线</strong></td>
+      <td>等同 No Parking</td>
+      <td class="fine-amount">罚款</td>
+    </tr>
+  </table>
+
+  <div class="alert alert-green">
+    <strong>珀斯停车小贴士：</strong>
+    <ul style="margin-top:4px">
+      <li>购物中心通常免费停车 2-3 小时</li>
+      <li>路边停车看清楚标志上的时间段（如"2P 8am-5:30pm"意味着过了 5:30pm 就不限时了）</li>
+      <li>很多停车场支持 APP 缴费（如 CellOPark, EasyPark）</li>
+      <li>停车方向：必须<strong>与车流同方向</strong>停车（靠左停，车头朝前）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 10. EMERGENCY ========== -->
+<div class="section" id="sec-emergency">
+  <h2><span style="font-size:1.2em">🆘</span> 10. 紧急联系与应急</h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:16px 0">
+    <div style="background:#ffebee;padding:20px;border-radius:10px;text-align:center">
+      <div style="font-size:2.5em;font-weight:900;color:var(--red)">000</div>
+      <strong>紧急报警</strong><br>
+      <small>警察 / 救护车 / 消防</small>
+    </div>
+    <div style="background:#e3f2fd;padding:20px;border-radius:10px;text-align:center">
+      <div style="font-size:2.5em;font-weight:900;color:var(--blue)">112</div>
+      <strong>手机紧急号码</strong><br>
+      <small>全球通用，手机可直接拨打</small>
+    </div>
+    <div style="background:#fff3e0;padding:20px;border-radius:10px;text-align:center">
+      <div style="font-size:1.5em;font-weight:900;color:var(--orange)">131 444</div>
+      <strong>非紧急报警</strong><br>
+      <small>WA 警察非紧急事务</small>
+    </div>
+    <div style="background:#e8f5e9;padding:20px;border-radius:10px;text-align:center">
+      <div style="font-size:1.2em;font-weight:900;color:var(--green)">9474 9055</div>
+      <strong>野生动物救助</strong><br>
+      <small>Wildcare 热线</small>
+    </div>
+  </div>
+
+  <h3>交通事故处理步骤</h3>
+  <ol>
+    <li><strong>确保安全</strong> — 开双闪，移至安全位置（如果可以移动）</li>
+    <li><strong>检查人员</strong> — 是否有人受伤</li>
+    <li><strong>拨打 000</strong> — 如果有人受伤或车辆无法移动</li>
+    <li><strong>交换信息</strong> — 对方姓名、地址、驾照号码、车辆注册号、保险公司</li>
+    <li><strong>拍照留证</strong> — 拍摄现场、车辆损坏、对方车牌</li>
+    <li><strong>报告保险</strong> — 租车的话联系租车公司</li>
+  </ol>
+
+  <div class="alert alert-blue">
+    <strong>推荐 APP：</strong>
+    <ul style="margin-top:4px">
+      <li><strong>St John First Responder</strong> — 呼叫救护车时自动发送 GPS 定位</li>
+      <li><strong>Main Roads WA Travel Map</strong> — 实时路况</li>
+      <li><strong>emergency.wa.gov.au</strong> — 紧急警报（山火等）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 11. CHECKLIST ========== -->
+<div class="section" id="sec-checklist">
+  <h2><span style="font-size:1.2em">✅</span> 11. 出发前自检清单</h2>
+
+  <p>打勾确认每项都准备好了：</p>
+  <ul class="checklist" id="checklist">
+    <li><input type="checkbox" id="c1"><label for="c1">中国驾照原件（在有效期内）</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">支付宝翻译认证件小本本（或其他英文翻译件）</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">护照（随身携带）</label></li>
+    <li><input type="checkbox" id="c4"><label for="c4">了解"靠左行驶"规则，准备好提醒贴纸</label></li>
+    <li><input type="checkbox" id="c5"><label for="c5">知道红灯不能左转</label></li>
+    <li><input type="checkbox" id="c6"><label for="c6">知道环岛顺时针通行、让右方来车</label></li>
+    <li><input type="checkbox" id="c7"><label for="c7">知道市区默认限速 50km/h</label></li>
+    <li><input type="checkbox" id="c8"><label for="c8">知道学校区域限速 40km/h</label></li>
+    <li><input type="checkbox" id="c9"><label for="c9">手机已设置车载支架，不会手持</label></li>
+    <li><input type="checkbox" id="c10"><label for="c10">知道紧急电话 000</label></li>
+    <li><input type="checkbox" id="c11"><label for="c11">租车保险已确认覆盖范围</label></li>
+    <li><input type="checkbox" id="c12"><label for="c12">知道野生动物风险（如计划自驾郊区）</label></li>
+  </ul>
+  <p id="checkResult" style="text-align:center;margin-top:16px;font-weight:600;color:#999"></p>
+</div>
+
+<!-- ========== 12. QUIZ ========== -->
+<div class="section" id="sec-quiz">
+  <h2><span style="font-size:1.2em">📝</span> 12. 互动测验</h2>
+  <p>看看你掌握了多少！共 10 题，每题选择后显示答案和解释。</p>
+
+  <div id="quizContainer"></div>
+
+  <div class="quiz-score" id="quizScore" style="display:none">
+    <div>你的得分</div>
+    <div class="score-num" id="scoreNum">0/10</div>
+    <div id="scoreMsg"></div>
+    <button onclick="resetQuiz()" style="margin-top:12px;padding:10px 24px;background:var(--blue);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:1em">重新测验</button>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<div style="text-align:center;padding:20px;color:#999;font-size:.85em;border-top:1px solid #e0e0e0;margin-top:20px">
+  <p>澳洲西澳驾驶培训材料 | AU-AID 珀斯生活指南</p>
+  <p>信息来源：WA 交通部 (transport.wa.gov.au)、WA 道路安全委员会 (rsc.wa.gov.au)</p>
+  <p>最后更新：2026年5月 | 仅供参考，以官方最新规定为准</p>
+</div>
+
+</div><!-- end container -->
+
+<script>
+// ===== Tab switching =====
+function switchTab(group, index) {
+  document.querySelectorAll(`[id^="${group}-tab-"]`).forEach((el, i) => {
+    el.classList.toggle('active', i === index);
+  });
+  document.querySelectorAll(`[onclick*="switchTab('${group}'"]`).forEach((el, i) => {
+    el.classList.toggle('active', i === index);
+  });
+}
+
+// ===== Expandable sections =====
+function toggleExpand(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// ===== Flip signs =====
+function flipSign(card) {
+  card.style.transform = card.style.transform === 'scale(1.05)' ? '' : 'scale(1.05)';
+}
+
+// ===== Progress tracking =====
+function updateProgress() {
+  const sections = document.querySelectorAll('.section');
+  let visible = 0;
+  sections.forEach(s => {
+    const rect = s.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.7) visible++;
+  });
+  const pct = Math.round((visible / sections.length) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `学习进度：${pct}%`;
+}
+window.addEventListener('scroll', updateProgress);
+updateProgress();
+
+// ===== Checklist =====
+document.querySelectorAll('.checklist input').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const total = document.querySelectorAll('.checklist input').length;
+    const checked = document.querySelectorAll('.checklist input:checked').length;
+    const el = document.getElementById('checkResult');
+    if (checked === total) {
+      el.textContent = '🎉 全部完成！你准备好了！';
+      el.style.color = '#388E3C';
+    } else {
+      el.textContent = `已完成 ${checked}/${total} 项`;
+      el.style.color = '#1976D2';
+    }
+  });
+});
+
+// ===== Quiz =====
+const quizData = [
+  {
+    q: '在澳洲 WA，车辆应该靠哪边行驶？',
+    opts: ['靠右行驶（和中国一样）', '靠左行驶', '中间车道行驶', '取决于道路类型'],
+    ans: 1,
+    explain: '澳洲是左侧通行国家，车辆靠左行驶，方向盘在右侧。这是和中国最大的不同。'
+  },
+  {
+    q: '红灯亮时，可以左转吗？',
+    opts: ['可以，和小转弯一样', '不可以，除非有绿色箭头灯', '只有右转可以', '要看具体情况'],
+    ans: 1,
+    explain: '在澳洲，红灯时绝对不能左转（这相当于中国的"红灯不能右转"）。除非有专门的绿色箭头信号灯允许左转。'
+  },
+  {
+    q: '市区没有限速标志时，默认限速是多少？',
+    opts: ['40 km/h', '50 km/h', '60 km/h', '80 km/h'],
+    ans: 1,
+    explain: 'WA 市区默认限速 50 km/h。如果你没看到限速牌，就按 50 开。'
+  },
+  {
+    q: '进入环岛时应该让谁先行？',
+    opts: ['让对面的车', '让左边的车', '让已经在环岛内的车（右方来车）', '谁快谁先'],
+    ans: 2,
+    explain: '进入环岛前必须让行已经在环岛内的车辆。因为环岛是顺时针方向，所以是从你右边来的车。'
+  },
+  {
+    q: '开车时手机放在支架上，可以刷微信吗？',
+    opts: ['可以，只要放在支架上', '可以，等红灯时看', '不可以，任何发信息行为都违规', '可以，只要不手持'],
+    ans: 2,
+    explain: '发短信、看微信/社交媒体在任何情况下都是违规的，即使手机在支架上也不行。违规罚款 $1,000 + 扣 4 分。'
+  },
+  {
+    q: '持中国驾照在 WA 驾驶，必须携带什么？',
+    opts: ['只带中国驾照原件', '只带翻译件', '中国驾照原件 + 英文翻译件/IDP', '不需要任何证件'],
+    ans: 2,
+    explain: '必须同时携带中国驾照原件和英文翻译件（支付宝翻译认证件小本本或公证翻译件）。两样缺一不可。'
+  },
+  {
+    q: '看到黄色菱形标志（上面有动物图案），意味着什么？',
+    opts: ['前方有动物园', '前方有野生动物出没，注意减速', '禁止超车', '前方有农场'],
+    ans: 1,
+    explain: '黄色菱形 = 警告标志。动物图案表示该路段有野生动物（如袋鼠）横穿的风险，尤其在黎明和黄昏时段。'
+  },
+  {
+    q: '超速 40 km/h 以上会有什么后果？',
+    opts: ['罚款 $400', '罚款 $800', '罚款 $1,200 + 立即吊销驾照 28 天', '只罚款不扣分'],
+    ans: 2,
+    explain: '超速 40km/h 以上罚款 $1,200 + 扣 7 分，并且会立即吊销驾照 28 天。在学校区域超速 45km/h 以上车辆还会被扣押。'
+  },
+  {
+    q: '遇到停在路边的警车/救护车闪灯，你应该？',
+    opts: ['正常通过', '减速到 40km/h', '停下来等', '加速通过'],
+    ans: 1,
+    explain: '这是 SLOMO 法则（Slow Down, Move Over）：看到停在路边的紧急车辆闪灯，必须减速到 40km/h 并尽量让出空间。'
+  },
+  {
+    q: '正规驾照持有者的血液酒精浓度上限是多少？',
+    opts: ['0.00%（完全不能喝）', '0.02%', '0.05%', '0.08%'],
+    ans: 2,
+    explain: '正式驾照 BAC 上限是 0.05%（约一杯标准酒精饮品）。但建议开车日完全不饮酒，因为个体代谢差异大，WA 警察会随机路检。'
+  }
+];
+
+let quizAnswered = 0;
+let quizCorrect = 0;
+
+function renderQuiz() {
+  const container = document.getElementById('quizContainer');
+  container.innerHTML = '';
+  quizAnswered = 0;
+  quizCorrect = 0;
+  document.getElementById('quizScore').style.display = 'none';
+
+  quizData.forEach((item, qi) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-wrap';
+    div.innerHTML = `
+      <div class="quiz-q"><span class="q-num">第 ${qi+1} 题</span>：${item.q}</div>
+      <div class="quiz-options">
+        ${item.opts.map((o, oi) => `<button class="quiz-opt" data-q="${qi}" data-o="${oi}" onclick="checkAnswer(this,${qi},${oi})">${String.fromCharCode(65+oi)}. ${o}</button>`).join('')}
+      </div>
+      <div class="quiz-explain" id="explain-${qi}"></div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function checkAnswer(btn, qi, oi) {
+  const wrap = btn.closest('.quiz-wrap');
+  const buttons = wrap.querySelectorAll('.quiz-opt');
+  buttons.forEach(b => b.disabled = true);
+
+  if (oi === quizData[qi].ans) {
+    btn.classList.add('correct');
+    quizCorrect++;
+  } else {
+    btn.classList.add('wrong');
+    buttons[quizData[qi].ans].classList.add('correct');
+  }
+
+  const explain = document.getElementById(`explain-${qi}`);
+  explain.classList.add('show');
+  explain.style.background = oi === quizData[qi].ans ? '#e8f5e9' : '#ffebee';
+  explain.innerHTML = `<strong>${oi === quizData[qi].ans ? '✅ 正确！' : '❌ 不对。'}</strong> ${quizData[qi].explain}`;
+
+  quizAnswered++;
+  if (quizAnswered === quizData.length) {
+    setTimeout(showScore, 600);
+  }
+}
+
+function showScore() {
+  const el = document.getElementById('quizScore');
+  el.style.display = 'block';
+  document.getElementById('scoreNum').textContent = `${quizCorrect}/${quizData.length}`;
+  const pct = quizCorrect / quizData.length;
+  let msg = '';
+  if (pct === 1) msg = '满分！你已经完全掌握了澳洲驾驶规则！🎉';
+  else if (pct >= 0.8) msg = '非常好！再加把劲就能满分了！';
+  else if (pct >= 0.6) msg = '还不错，但还需要再复习一下重点内容。';
+  else msg = '建议再仔细看一遍培训材料哦！';
+  document.getElementById('scoreMsg').textContent = msg;
+  el.scrollIntoView({ behavior: 'smooth' });
+}
+
+function resetQuiz() {
+  renderQuiz();
+  document.getElementById('sec-quiz').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Init quiz
+renderQuiz();
+
+// ===== Smooth scroll for TOC =====
+document.querySelectorAll('.toc a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      const offset = 60;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
